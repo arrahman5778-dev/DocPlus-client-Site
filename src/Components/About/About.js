@@ -12,11 +12,12 @@ const About = () => {
             </div>
             <div className=' flex py-24'>
 
-                <img className=' w-82 h-96' src={DoctorsImage} alt="" />
+                <img className=' w-96 h-96' src={DoctorsImage} alt="" />
 
                 <div className='md:px-10 order-2 md:order-none py-24'>
                     <h1 className='text-emerald-400 font-mono text-3xl font-bold py-7'>This is a my dream </h1>
                     <h1 className='text-slate-400 font-mono text-2xl font-bold'>Professional Software engineers</h1>
+                    <h1 className='text-slate-400 font-mono text-2xl font-bold'>My goal is to be a good full stack developer</h1>
                 </div>
             </div>
 
