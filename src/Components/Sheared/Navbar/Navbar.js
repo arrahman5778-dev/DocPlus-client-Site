@@ -13,7 +13,7 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
 
   return (
-    <Disclosure as="nav" className=" bg-green-300 shadow-md sticky top-0 z-40">
+    <Disclosure as="nav" className=" bg-green-400 shadow-md sticky top-0 z-40">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@ const Navbar = () => {
                       alt="Workflow"
                     />
                     <h1 className="text-3xl font-bold font-mono text-black mx-4">
-                      Doc<span className=" text-blue-600">Treat</span>
+                      Doc<span className=" text-blue-600">Plus</span>
                     </h1>
                   </Link>
                 </div>
