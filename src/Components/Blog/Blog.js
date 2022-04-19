@@ -23,6 +23,7 @@ const Blog = () => {
           types of users.
         </p>
       </div>
+
       <div className=" border-4 rounded m-2 text-left  w-1/2 mx-auto p-5 my-5">
         <h3 className="text-xl">
           2. Why are you using firebase? What other options do you have to
@@ -37,14 +38,24 @@ const Blog = () => {
       </div>
       <div className=" border-4 rounded m-2 text-left  w-1/2 mx-auto p-5 my-5">
         <h3 className="text-xl">
-          2. Why are you using firebase? What other options do you have to
-          implement authentication?
+          3. What other services does firebase provide other than
+          authentication?
         </h3>
         <p>
-          Firebase can be used for the following benefits: Firebase manages all
-          the data in the database real-time. Thus, exchanging data from
-          database is easy and fast. So, if you want to develop mobile apps like
-          live streaming, chat messaging, etc., you can use Firebase.
+          <div className="block md:flex w-10/12 items-center justify-between mx-auto">
+            <div className="text-left">
+              <li>Cloud Firestore</li>
+              <li>Cloud Functions</li>
+              <li>Hosting</li>
+              <li>Cloud Storage</li>
+            </div>
+            <div className="text-left">
+              <li>Google Analytics</li>
+              <li>Cloud Messaging</li>
+              <li>Dynamic Links</li>
+              <li>Predictions</li>
+            </div>
+          </div>
         </p>
       </div>
     </div>
