@@ -1,10 +1,10 @@
 import React from "react";
-import lungSVG from "../../img/Lungs.gif";
-import HeartSVG from "../../img/Cardiologist.gif";
-import EyeSVG from "../../img/Ophthalmologist.gif";
-import EarSVG from "../../img/Ear.gif";
-import CosmeticSVG from "../../img/Plastic surgery.gif";
-import ToothSVG from "../../img/tooth.gif";
+import lungSVG from "../../img/Blood test-bro.png";
+import HeartSVG from "../../img/Cardiologist-rafiki.png";
+import EyeSVG from "../../img/Ophthalmologist-amico.png";
+import EarSVG from "../../img/Vaccine-amico (1).png";
+import CosmeticSVG from "../../img/Medical prescription-amico.png";
+import ToothSVG from "../../img/Breast cancer research-bro.png";
 
 const Service = () => {
   return (
@@ -21,28 +21,25 @@ const Service = () => {
       <div className="service-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-36 px-5">
         <div className="serevice-card border-2 p-5 shadow-lg relative rounded-md mb-36">
           <img
-            className="mx-auto absolute top-[-25%] left-[25%]"
+            className="mx-auto absolute top-[-25%] left-[25%] w-64"
             src={lungSVG}
             alt="Svg doctro image"
           />
           <h1 className="mt-28 text-2xl mb-3 font-bold font-mono">
-            Respiratory
+            Blood Test
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-            The respiratory system is the network of organs and tissues that
-            help you breathe. It includes your airways, lungs and blood vessels.
-            The muscles that power your lungs are also part of the respiratory
-            system.{" "}
+          Regular blood testing is one of the most important ways to keep track of your overall physical well-being. Getting tested at routine intervals can allow you to see the way your body changes over time and empower you to make informed decisions about your health.{" "}
           </p>
-          <button className="py-2 px-12  bg-green-200 rounded mt-7 mb-3 font-semibold">
+          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
             Book Now
           </button>
         </div>
 
         <div className="serevice-card border-2 p-5 shadow-lg relative rounded-md mb-36">
           <img
-            className="mx-auto absolute top-[-25%] left-[25%]"
+            className="mx-auto absolute top-[-45%] left-[5%] w-70"
             src={HeartSVG}
             alt="Svg doctro image"
           />
@@ -56,14 +53,14 @@ const Service = () => {
             vessels — including heart rhythm disorders, coronary artery disease,
             heart attacks, heart defects and infections, and related disorders.{" "}
           </p>
-          <button className="py-2 px-12  bg-green-200 rounded mt-7 mb-3 font-semibold">
+          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
             Book Now
           </button>
         </div>
 
         <div className="serevice-card border-2 p-5 shadow-lg relative rounded-md mb-36">
           <img
-            className="mx-auto absolute top-[-25%] left-[25%]"
+            className="mx-auto absolute top-[-28%] left-[15%] w-64"
             src={EyeSVG}
             alt="Svg doctro image"
           />
@@ -77,70 +74,61 @@ const Service = () => {
             affect the eye. The ophthalmologist performs vision tests and
             prescribes corrective lenses .
           </p>
-          <button className="py-2 px-12  bg-green-200 rounded mt-7 mb-3 font-semibold">
+          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
             Book Now
           </button>
         </div>
 
         <div className="serevice-card border-2 p-5 shadow-lg relative rounded-md mb-36">
           <img
-            className="mx-auto absolute top-[-25%] left-[25%]"
+            className="mx-auto absolute top-[-28%] left-[15%] w-64"
             src={CosmeticSVG}
             alt="Svg doctro image"
           />
           <h1 className="mt-28 text-2xl mb-3 font-bold font-mono">
-            Cosmetology
+          Medical prescription
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-            Cosmetology is the art and science beautifying the hair, nails, and
-            skin. A cosmetologist is an expert in applying cosmetic procedures,
-            therapies, and treatments to beautify one’s outer appearance. and
-            implementing cosmetic treatments to people’s hair, skin, and nails.{" "}
+          As reported by the FDA, a prescription with the abbreviation “MTX” has been interpreted as both methotrexate (used for rheumatoid arthritis) or mitoxantrone (a cancer drug). “ATX” was misunderstood to be the shorthand for zidovudine (AZT, an HIV drug) or azathioprine (an immunosuppressant drug). These types of errors can be linked with severe patient harm.{" "}
           </p>
-          <button className="py-2 px-12  bg-green-200 rounded mt-7 mb-3 font-semibold">
+          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
             Book Now
           </button>
         </div>
 
         <div className="serevice-card border-2 p-5 shadow-lg relative rounded-md mb-36">
           <img
-            className="mx-auto absolute top-[-25%] left-[25%]"
+            className="mx-auto absolute top-[-25%] left-[15%] w-72"
             src={ToothSVG}
             alt="Svg doctro image"
           />
           <h1 className="mt-28 text-2xl mb-3 font-bold font-mono">
-            Orthodontist
+          Breast Cancer Research
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-            Orthodontics and dentofacial orthopedics is the dental specialty
-            that includes the diagnosis, prevention, interception, and
-            correction of malocclusion , as well as neuromuscular and skeletal
-            abnormalities of the developing or mature orofacial structures.{" "}
+          Breast Cancer Research and Treatment provides the surgeon, radiotherapist, medical oncologist, endocrinologist, epidemiologist, immunologist or cell biologist investigating problems in breast cancer a single forum for communication. It seeks to develop a new focus and new perspectives for all those concerned with breast cancer{" "}
           </p>
-          <button className="py-2 px-12  bg-green-200 rounded mt-7 mb-3 font-semibold">
+          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
             Book Now
           </button>
         </div>
 
         <div className="serevice-card border-2 p-5 shadow-lg relative rounded-md mb-36">
           <img
-            className="mx-auto absolute top-[-25%] left-[25%]"
+            className="mx-auto absolute top-[-25%] left-[15%] w-64"
             src={EarSVG}
             alt="Svg doctro image"
           />
           <h1 className="mt-28 text-2xl mb-3 font-bold font-mono">
-            Otolaryngologist
+          COVID-19 vaccines
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-            Otolaryngology is a medical specialty which is focused on the ears,
-            nose, and throat. It is also called otolaryngology-head and neck
-            surgery because specialists are trained in both medicine and
-            surgery.{" "}
+          Safe and effective vaccines are available that provide strong protection against serious illness, hospitalization and death from COVID-19. Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important things you can do to protect yourself against COVID-19, help end the pandemic and stop new variants emerging. {" "}
           </p>
-          <button className="py-2 px-12  bg-green-200 rounded mt-7 mb-3 font-semibold">
+          <button className="py-2 px-12  bg-sky-300   rounded mt-7 mb-3 font-semibold">
             Book Now
           </button>
         </div>

@@ -88,7 +88,7 @@ const SignUp = () => {
 
   return (
     <div className="mb-24 mx-5">
-      <div className="w-full lg:w-1/3 md:w-2/3 mx-auto p-5 mt-[8rem] rounded-lg bg-green-200 ">
+      <div className="w-full lg:w-1/3 md:w-2/3 mx-auto p-5 mt-[8rem] rounded-lg bg-sky-200 ">
         <h1 className="text-4xl font-semibold mb-5">Sign Up</h1>
         <div className="h-[1px] w-full bg-black opacity-20 mb-10"></div>
         <div className="flex flex-col text-left mb-8">
@@ -155,7 +155,7 @@ const SignUp = () => {
         <div className="btn-container mx-10 mt-10 mb-3">
           <button
             onClick={HanddleSignUp}
-            className="w-1/2 bg-green-500 shadow-md py-2 text-2xl rounded text-white"
+            className="w-1/2 bg-sky-500 shadow-md py-2 text-2xl rounded text-white"
           >
             Sign Up
           </button>
@@ -164,7 +164,7 @@ const SignUp = () => {
           Already have an Account?{" "}
           <span
             onClick={() => naviget("/login")}
-            className=" text-sky-700 cursor-pointer"
+            className=" text-green-600 cursor-pointer"
           >
             LogIn
           </span>

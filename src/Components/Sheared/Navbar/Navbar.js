@@ -13,7 +13,7 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
 
   return (
-    <Disclosure as="nav" className=" bg-green-400 shadow-md sticky top-0 z-40">
+    <Disclosure as="nav" className=" bg-sky-400 shadow-md sticky top-0 z-40">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@ const Navbar = () => {
                       alt="Workflow"
                     />
                     <h1 className="text-3xl font-bold font-mono text-black mx-4">
-                      Doc<span className=" text-blue-600">Plus</span>
+                      Doc<span className=" text-white">Plus</span>
                     </h1>
                   </Link>
                 </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
                       to={"/"}
                       className={({ isActive }) =>
                         `px-3 py-2 rounded-md text-xl font-medium ${
-                          isActive ? "text-blue-500" : "text-black"
+                          isActive ? "text-white" : "text-black"
                         }`
                       }
                     >
@@ -58,7 +58,7 @@ const Navbar = () => {
                       to={"service"}
                       className={({ isActive }) =>
                         `px-3 py-2 rounded-md text-xl font-medium ${
-                          isActive ? "text-blue-500" : "text-black"
+                          isActive ? "text-white" : "text-black"
                         }`
                       }
                     >
@@ -68,7 +68,7 @@ const Navbar = () => {
                       to={"blog"}
                       className={({ isActive }) =>
                         `px-3 py-2 rounded-md text-xl font-medium ${
-                          isActive ? "text-blue-500" : "text-black"
+                          isActive ? "text-white" : "text-black"
                         }`
                       }
                     >
@@ -78,7 +78,7 @@ const Navbar = () => {
                       to={"about"}
                       className={({ isActive }) =>
                         `px-3 py-2 rounded-md text-xl font-medium ${
-                          isActive ? "text-blue-500" : "text-black"
+                          isActive ? "text-white" : "text-black"
                         }`
                       }
                     >
@@ -93,7 +93,7 @@ const Navbar = () => {
                         }}
                         className={({ isActive }) =>
                           `px-3 py-2 rounded-md text-xl font-medium ${
-                            isActive ? "text-blue-500" : "text-black"
+                            isActive ? "text-white" : "text-black"
                           }`
                         }
                       >
@@ -104,7 +104,7 @@ const Navbar = () => {
                         to={"signup"}
                         className={({ isActive }) =>
                           `px-3 py-2 rounded-md text-xl font-medium ${
-                            isActive ? "text-blue-500" : "text-black"
+                            isActive ? "text-white" : "text-black"
                           }`
                         }
                       >
@@ -115,7 +115,7 @@ const Navbar = () => {
                         to={"login"}
                         className={({ isActive }) =>
                           `px-3 py-2 rounded-md text-xl font-medium ${
-                            isActive ? "text-blue-500" : "text-black"
+                            isActive ? "text-white" : "text-black"
                           }`
                         }
                       >
@@ -134,7 +134,7 @@ const Navbar = () => {
                 to={"/"}
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-xl font-medium block ${
-                    isActive ? "text-blue-500" : "text-black"
+                    isActive ? "text-white" : "text-black"
                   }`
                 }
               >
@@ -144,7 +144,7 @@ const Navbar = () => {
                 to={"about"}
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-xl font-medium block ${
-                    isActive ? "text-blue-500" : "text-black"
+                    isActive ? "text-white" : "text-black"
                   }`
                 }
               >
@@ -154,7 +154,7 @@ const Navbar = () => {
                 to={"Cars"}
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-xl font-medium block ${
-                    isActive ? "text-blue-500" : "text-black"
+                    isActive ? "text-white" : "text-black"
                   }`
                 }
               >
@@ -164,7 +164,7 @@ const Navbar = () => {
                 to={"login"}
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-xl font-medium block ${
-                    isActive ? "text-blue-500" : "text-black"
+                    isActive ? "text-white" : "text-black"
                   }`
                 }
               >
