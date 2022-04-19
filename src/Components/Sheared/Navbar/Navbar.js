@@ -4,6 +4,7 @@ import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import auth from "../../Firebase/Friebase.init";
+import logo from "../../../img/logo.png";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -34,7 +35,7 @@ const Navbar = () => {
                   <Link className="flex-shrink-0 flex items-center " to={"/"}>
                     <img
                       className="block h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                      src={logo}
                       alt="Workflow"
                     />
                     <h1 className="text-3xl font-bold font-mono text-black mx-4">

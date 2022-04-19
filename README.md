@@ -1,6 +1,6 @@
 # Name : DocPlus
 
-This project : [Camera World](https://camera-world-ar.netlify.app/).
+This project : [DocPlus](https://camera-world-ar.netlify.app/).
 
 ## My Services
 

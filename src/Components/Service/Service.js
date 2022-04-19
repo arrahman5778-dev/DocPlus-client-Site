@@ -5,8 +5,10 @@ import EyeSVG from "../../img/Ophthalmologist-amico.png";
 import EarSVG from "../../img/Vaccine-amico (1).png";
 import CosmeticSVG from "../../img/Medical prescription-amico.png";
 import ToothSVG from "../../img/Breast cancer research-bro.png";
+import { useNavigate } from "react-router-dom";
 
 const Service = () => {
+  const navigate = useNavigate();
   return (
     <div className="max-w-7xl mx-auto py-16">
       <div className="service-header mb-3">
@@ -30,9 +32,15 @@ const Service = () => {
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-          Regular blood testing is one of the most important ways to keep track of your overall physical well-being. Getting tested at routine intervals can allow you to see the way your body changes over time and empower you to make informed decisions about your health.{" "}
+            Regular blood testing is one of the most important ways to keep
+            track of your overall physical well-being. Getting tested at routine
+            intervals can allow you to see the way your body changes over time
+            and empower you to make informed decisions about your health.{" "}
           </p>
-          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
+          <button
+            onClick={() => navigate("/checkout")}
+            className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold"
+          >
             Book Now
           </button>
         </div>
@@ -53,7 +61,10 @@ const Service = () => {
             vessels — including heart rhythm disorders, coronary artery disease,
             heart attacks, heart defects and infections, and related disorders.{" "}
           </p>
-          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
+          <button
+            onClick={() => navigate("/checkout")}
+            className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold"
+          >
             Book Now
           </button>
         </div>
@@ -74,7 +85,10 @@ const Service = () => {
             affect the eye. The ophthalmologist performs vision tests and
             prescribes corrective lenses .
           </p>
-          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
+          <button
+            onClick={() => navigate("/checkout")}
+            className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold"
+          >
             Book Now
           </button>
         </div>
@@ -86,13 +100,21 @@ const Service = () => {
             alt="Svg doctro image"
           />
           <h1 className="mt-28 text-2xl mb-3 font-bold font-mono">
-          Medical prescription
+            Medical prescription
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-          As reported by the FDA, a prescription with the abbreviation “MTX” has been interpreted as both methotrexate (used for rheumatoid arthritis) or mitoxantrone (a cancer drug). “ATX” was misunderstood to be the shorthand for zidovudine (AZT, an HIV drug) or azathioprine (an immunosuppressant drug). These types of errors can be linked with severe patient harm.{" "}
+            As reported by the FDA, a prescription with the abbreviation “MTX”
+            has been interpreted as both methotrexate (used for rheumatoid
+            arthritis) or mitoxantrone (a cancer drug). “ATX” was misunderstood
+            to be the shorthand for zidovudine (AZT, an HIV drug) or
+            azathioprine (an immunosuppressant drug). These types of errors can
+            be linked with severe patient harm.{" "}
           </p>
-          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
+          <button
+            onClick={() => navigate("/checkout")}
+            className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold"
+          >
             Book Now
           </button>
         </div>
@@ -104,13 +126,21 @@ const Service = () => {
             alt="Svg doctro image"
           />
           <h1 className="mt-28 text-2xl mb-3 font-bold font-mono">
-          Breast Cancer Research
+            Breast Cancer Research
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-          Breast Cancer Research and Treatment provides the surgeon, radiotherapist, medical oncologist, endocrinologist, epidemiologist, immunologist or cell biologist investigating problems in breast cancer a single forum for communication. It seeks to develop a new focus and new perspectives for all those concerned with breast cancer{" "}
+            Breast Cancer Research and Treatment provides the surgeon,
+            radiotherapist, medical oncologist, endocrinologist, epidemiologist,
+            immunologist or cell biologist investigating problems in breast
+            cancer a single forum for communication. It seeks to develop a new
+            focus and new perspectives for all those concerned with breast
+            cancer{" "}
           </p>
-          <button className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold">
+          <button
+            onClick={() => navigate("/checkout")}
+            className="py-2 px-12  bg-sky-300 rounded mt-7 mb-3 font-semibold"
+          >
             Book Now
           </button>
         </div>
@@ -122,13 +152,21 @@ const Service = () => {
             alt="Svg doctro image"
           />
           <h1 className="mt-28 text-2xl mb-3 font-bold font-mono">
-          COVID-19 vaccines
+            COVID-19 Vaccines
           </h1>
           <hr />
           <p className="mt-5 text-justify">
-          Safe and effective vaccines are available that provide strong protection against serious illness, hospitalization and death from COVID-19. Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important things you can do to protect yourself against COVID-19, help end the pandemic and stop new variants emerging. {" "}
+            Safe and effective vaccines are available that provide strong
+            protection against serious illness, hospitalization and death from
+            COVID-19. Billions of people have been vaccinated against COVID-19.
+            Getting vaccinated is one of the most important things you can do to
+            protect yourself against COVID-19, help end the pandemic and stop
+            new variants emerging.{" "}
           </p>
-          <button className="py-2 px-12  bg-sky-300   rounded mt-7 mb-3 font-semibold">
+          <button
+            onClick={() => navigate("/checkout")}
+            className="py-2 px-12  bg-sky-300   rounded mt-7 mb-3 font-semibold"
+          >
             Book Now
           </button>
         </div>

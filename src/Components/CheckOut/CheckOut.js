@@ -1,30 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import SocialLogin from "../SocialLogin/SocialLogin";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { XIcon } from "@heroicons/react/outline";
-import {
-  useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword,
-} from "react-firebase-hooks/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Loading from "../../Sheared/Loading/Loading";
-import auth from "../../Firebase/Friebase.init";
 
-const Login = () => {
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
-  const [sendPasswordResetEmail, sending, resetError] =
-    useSendPasswordResetEmail(auth);
-
-  const location = useLocation();
+const CheckOut = () => {
   const naviget = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
 
   // Error
   const [emailError, setEmailError] = useState("");
   const [passError, setPassError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [addressError, setAddressError] = useState("");
 
   // email input value & validation
   const emailClick = (e) => {
@@ -53,56 +44,77 @@ const Login = () => {
 
   // handel Login
 
-  const handelLogin = (e) => {
-    if (email !== "" && password !== "") {
-      signInWithEmailAndPassword(email, password);
+  const handelSubmit = (e) => {
+    if (email !== "" && password !== "" && name !== "" && address !== "") {
       setEmailError("");
       setPassError("");
+      setNameError("");
+      setAddressError("");
+
+      tostmessage();
+      naviget("/");
     } else {
-      setEmailError("Please Fill The Input");
-      setPassError("Please Give Me the Password");
+      setEmailError("Please Give Valid Email");
+      setPassError("Please Give minimum 6 digit");
+      setNameError("Please Give the Name ");
+      setAddressError("Please Give The Address");
     }
     e.preventDefault();
   };
 
-  // requirAuth
-  const from = location.state?.from?.pathname || "/";
-
-  // User successfully sign up
-  if (user) {
-    naviget(from, { replace: true });
-    toast("Wow Sign Up Successfully!");
-  }
-
-  // User sign up error
-  useEffect(() => {
-    if (error?.code) {
-      toast("Opps!! No User Found");
-    }
-  }, [error]);
-
-  // for loading
-
-  if (loading) {
-    return <Loading></Loading>;
-  }
-
-  // password reset
-  const resetPassword = async () => {
-    if (email === "") {
-      setEmailError("Please Give Me A Varified Email");
-    } else {
-      await sendPasswordResetEmail(email);
-      toast("Sent Email");
-      setEmailError("");
-    }
+  const tostmessage = () => {
+    toast("Thanks For Boocking");
+    console.log("thank u");
   };
 
   return (
     <div className="mb-24 mx-5">
-      <div className="w-full lg:w-1/3 md:w-2/3 mx-auto p-5 mt-[8rem] rounded-lg bg-green-200 ">
-        <h1 className="text-4xl font-semibold mb-5">log In</h1>
+      <div className="w-full lg:w-1/3 md:w-2/3 mx-auto p-5 mt-[8rem] rounded-lg bg-sky-200 ">
+        <h1 className="text-4xl font-semibold mb-5">Boocking</h1>
         <div className="h-[1px] w-full bg-black opacity-20 mb-10"></div>
+
+        <div className="flex flex-col text-left mb-8">
+          <label className=" text-xl ml-2 mb-2" htmlFor="name">
+            Name
+          </label>
+          <input
+            onChange={(e) => setName(e.target.value)}
+            className="py-2 rounded-lg shadow-md border-0 outline-0 px-4 text-xl"
+            type="text"
+            name="name"
+            id="name"
+            required
+          />
+        </div>
+        {nameError ? (
+          <p className="text-left mb-7 text-red-600 flex">
+            <XIcon className="w-5 mr-2"></XIcon> {nameError}
+          </p>
+        ) : (
+          ""
+        )}
+
+        <div className="flex flex-col text-left mb-8">
+          <label className=" text-xl ml-2 mb-2" htmlFor="address">
+            Address
+          </label>
+          <input
+            onChange={(e) => setAddress(e.target.value)}
+            className="py-2 rounded-lg shadow-md border-0 outline-0 px-4 text-xl"
+            type="text"
+            name="address"
+            id="address"
+            required
+          />
+        </div>
+        {addressError ? (
+          <p className="text-left mb-7 text-red-600 flex">
+            <XIcon className="w-5 mr-2"></XIcon> {addressError}
+          </p>
+        ) : (
+          ""
+        )}
+
         <div className="flex flex-col text-left mb-8">
           <label className=" text-xl ml-2 mb-2" htmlFor="email">
             Email
@@ -146,35 +158,17 @@ const Login = () => {
         )}
         <div className="btn-container mx-10 mt-10 mb-3">
           <button
-            onClick={handelLogin}
-            className="w-1/2 bg-green-500 shadow-md py-2 text-2xl rounded text-white"
+            onClick={handelSubmit}
+            className="w-1/2 bg-sky-500 shadow-md py-2 text-2xl rounded text-white"
           >
-            Log In
+            Book Now
           </button>
         </div>
-        <p className=" font-mono font-medium">
-          Create New Account?{" "}
-          <span
-            onClick={() => naviget("/signup")}
-            className=" text-sky-700 cursor-pointer"
-          >
-            Sign Up
-          </span>
-        </p>
-        <p className=" font-mono font-medium">
-          Forget Password?{" "}
-          <span
-            onClick={resetPassword}
-            className=" text-sky-700 cursor-pointer"
-          >
-            Reset Password
-          </span>
-        </p>
-        <SocialLogin></SocialLogin>
+
         <ToastContainer />
       </div>
     </div>
   );
 };
 
-export default Login;
+export default CheckOut;
